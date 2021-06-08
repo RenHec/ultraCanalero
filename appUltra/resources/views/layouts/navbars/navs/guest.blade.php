@@ -7,7 +7,7 @@
           <source src="/ultra/audio/tres.mp3" type="audio/mp3">
           <source src="/ultra/audio/uno.mp3" type="audio/mp3">
           <source src="/ultra/audio/dos.mp3" type="audio/mp3">
-              Tu navegador no soporta audio HTML5.
+          Tu navegador no soporta audio HTML5.
       </audio>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
