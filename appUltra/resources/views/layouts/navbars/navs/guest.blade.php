@@ -5,6 +5,7 @@
       <a class="navbar-brand" href="{{ route('welcome') }}">{{ $title }}</a>
       <audio autoplay="" loop controls="">
           <source src="/ultra/audio/uno.mp3" type="audio/mp3">
+          <source src="/ultra/audio/dos.mp3" type="audio/mp3">
               Tu navegador no soporta audio HTML5.
       </audio>
     </div>
