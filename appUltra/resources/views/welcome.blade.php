@@ -18,31 +18,59 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1191.jpg" alt="First slide">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1191-min.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1206.jpg" alt="Second slide">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1206-min.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1210.jpg" alt="Third slide">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1210-min.jpg" alt="Third slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1228.jpg" alt="Third slide">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1228-min.jpg" alt="Third slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1234.jpg" alt="Third slide">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1234-min.jpg" alt="Third slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1266.jpg" alt="Third slide">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1266-min.jpg" alt="Third slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1267.jpg" alt="Third slide">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1267-min.jpg" alt="Third slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1286.jpg" alt="Third slide">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1286-min.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1288-min.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1305-min.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1306-min.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1308-min.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1312-min.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1320-min.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="{{ asset('slider') }}/DSC_1321-min.jpg" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

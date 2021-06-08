@@ -110,7 +110,8 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
-audio {
+
+/*audio {
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
@@ -131,4 +132,4 @@ audio:active {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   transform: scale(1.05);
-}
+}*/
