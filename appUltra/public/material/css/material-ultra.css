@@ -110,3 +110,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
+
+label {
+  color: #114006;
+}

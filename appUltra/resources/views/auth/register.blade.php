@@ -31,7 +31,8 @@
             </div>
 
             <!--NOMBRES-->
-            <div class="bmd-form-group{{ $errors->has('names') ? ' has-danger' : '' }}">
+            <div class="form-group bmd-form-group{{ $errors->has('names') ? ' has-danger' : '' }}">
+              <label class="label-control" for="names">Ingresar los nombres</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
@@ -47,7 +48,8 @@
               @endif
             </div>
             <!--APELLIDOS-->
-            <div class="bmd-form-group{{ $errors->has('surnames') ? ' has-danger' : '' }} mt-3">
+            <div class="form-group bmd-form-group{{ $errors->has('surnames') ? ' has-danger' : '' }} mt-3">
+              <label class="label-control" for="surnames">Ingresar los apellidos</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
@@ -63,7 +65,8 @@
               @endif
             </div>
             <!--EMAIL-->
-            <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }} mt-3">
+            <div class="form-group bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }} mt-3">
+              <label class="label-control" for="email">Ingresar el correo electrónico</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
@@ -79,7 +82,8 @@
               @endif
             </div>
             <!--TELEFONO-->
-            <div class="bmd-form-group{{ $errors->has('phone') ? ' has-danger' : '' }} mt-3">
+            <div class="form-group bmd-form-group{{ $errors->has('phone') ? ' has-danger' : '' }} mt-3">
+              <label class="label-control" for="phone">Ingresar el número de teléfono</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
@@ -95,7 +99,8 @@
               @endif
             </div>
             <!--WHATSAPP-->
-            <div class="bmd-form-group{{ $errors->has('whatsapp') ? ' has-danger' : '' }} mt-3">
+            <div class="form-group bmd-form-group{{ $errors->has('whatsapp') ? ' has-danger' : '' }} mt-3">
+              <label class="label-control" for="whatsapp">Ingresar el número de whatsapp</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text icon">
@@ -111,7 +116,8 @@
               @endif
             </div>
             <!--TELEGRAM-->
-            <div class="bmd-form-group{{ $errors->has('telegram') ? ' has-danger' : '' }} mt-3">
+            <div class="form-group bmd-form-group{{ $errors->has('telegram') ? ' has-danger' : '' }} mt-3">
+              <label class="label-control" for="telegram">Ingresar el número de telegram</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text icon">
@@ -127,7 +133,8 @@
               @endif
             </div>
             <!--NACIMIENTO-->
-            <div class="bmd-form-group{{ $errors->has('birthday') ? ' has-danger' : '' }} mt-3">
+            <div class="form-group bmd-form-group{{ $errors->has('birthday') ? ' has-danger' : '' }} mt-3">
+              <label class="label-control" for="birthday">Ingresar la fecha de nacimiento</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text icon">
@@ -175,7 +182,8 @@
             </div>            
             <hr>
             <p class="card-description text-center">{{ __('Si es tu deseo apoyar en las distintas actividades del proyecto, te invitamos a que selecciones en que comisiones desearías apoyar.') }}</p>
-            <div class="bmd-form-group{{ $errors->has('commissions') ? ' has-danger' : '' }} mt-3">
+            <div class="form-group bmd-form-group{{ $errors->has('commissions') ? ' has-danger' : '' }} mt-3">
+              <label class="label-control" for="commissions">Seleccionar 2 comisiones como máximo</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text icon">

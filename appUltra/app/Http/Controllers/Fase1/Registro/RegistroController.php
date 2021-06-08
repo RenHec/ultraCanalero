@@ -40,14 +40,16 @@ class RegistroController extends Controller
             $data['information'] = mb_strtolower($request->information) == 'on' ? true : false;
             $insert = Persona::create($data);
 
-            foreach ($request->commissions as $value) {
-                $comision = PersonaComision::where('person_id', $insert->id)->where('commission_id', $value)->first();
-                if (is_null($comision)) {
-                    $comision = new PersonaComision();
+            if (isset($request->commissions)) {
+                foreach ($request->commissions as $value) {
+                    $comision = PersonaComision::where('person_id', $insert->id)->where('commission_id', $value)->first();
+                    if (is_null($comision)) {
+                        $comision = new PersonaComision();
+                    }
+                    $comision->person_id = $insert->id;
+                    $comision->commission_id = $value;
+                    $comision->save();
                 }
-                $comision->person_id = $insert->id;
-                $comision->commission_id = $value;
-                $comision->save();
             }
 
             $db->commit();

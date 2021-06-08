@@ -3,6 +3,10 @@
   <div class="container">
     <div class="navbar-wrapper">
       <a class="navbar-brand" href="{{ route('welcome') }}">{{ $title }}</a>
+      <audio autoplay="" loop controls="controls">
+          <source src="/audio/uno.mp3" type="audio/mp3">
+              Tu navegador no soporta audio HTML5.
+      </audio>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
       <span class="sr-only">Toggle navigation</span>
