@@ -19,10 +19,11 @@ class CreatePersonTable extends Migration
             $table->string('surnames', 50);
             $table->string('email', 50)->unique();
             $table->string('phone', 10)->unique();
-            $table->string('whatsapp', 10)->unique();
-            $table->string('telegram', 10)->unique();
+            $table->string('whatsapp', 10)->nullable();
+            $table->string('telegram', 10)->nullable();
             $table->date('birthday');
             $table->boolean('information')->default(false);
+            $table->ipAddress('ip');
             $table->softDeletes();
             $table->timestamps();
         });

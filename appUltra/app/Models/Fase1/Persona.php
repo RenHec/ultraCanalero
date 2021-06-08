@@ -37,7 +37,8 @@ class Persona extends Model
         'whatsapp',
         'telegram',
         'birthday',
-        'information'
+        'information',
+        'ip'
     ];
 
     /**
@@ -63,5 +64,15 @@ class Persona extends Model
     public function commissions()
     {
         return $this->belongsToMany(PersonaComision::class, 'id', 'person_id');
+    }
+
+    /**
+     * Get the user's full name.
+     *
+     * @return string
+     */
+    public function getFullNameAttribute()
+    {
+        return "{$this->names} {$this->surnames}";
     }
 }

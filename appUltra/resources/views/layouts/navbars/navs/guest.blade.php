@@ -23,6 +23,11 @@
             <i class="material-icons">person_add</i> {{ __('Registrarse') }}
           </a>
         </li>
+        <li class="nav-item{{ $activePage == 'lista-registro' ? ' active' : '' }}">
+          <a href="{{ route('registro.show') }}" class="nav-link">
+            <i class="material-icons">list_alt</i> {{ __('Ver listado') }}
+          </a>
+        </li>
       </ul>
     </div>
   </div>

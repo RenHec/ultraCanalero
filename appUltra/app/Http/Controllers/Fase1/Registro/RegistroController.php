@@ -38,6 +38,7 @@ class RegistroController extends Controller
 
             $data = $request->all();
             $data['information'] = mb_strtolower($request->information) == 'on' ? true : false;
+            $data['ip'] = $request->ip();
             $insert = Persona::create($data);
 
             if (isset($request->commissions)) {
@@ -59,5 +60,12 @@ class RegistroController extends Controller
             $db->rollBack();
             return redirect()->route('registro.index')->with('danger', "Ocurrio un problema al ingresar la información a la base de datos. {$e}");
         }
+    }
+
+    public function show()
+    {
+        $commissions = Comision::all();
+        $persons = PersonaComision::with('person')->get();
+        return view('auth.register_list', compact('commissions', 'persons'));
     }
 }

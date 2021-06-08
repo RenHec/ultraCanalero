@@ -26,8 +26,8 @@ class RegistroRequest extends FormRequest
         $date = date("Y-m-d");
         $date = date("Y-m-d", strtotime($date . "- 5 year"));
         return [
-            'names' => ['required', 'min:5', 'max:50', 'unique:person,names'],
-            'surnames' => ['required', 'min:5', 'max:50', 'unique:person,surnames'],
+            'names' => ['required', 'min:5', 'max:50'],
+            'surnames' => ['required', 'min:5', 'max:50'],
             'email' => ['required', 'min:5', 'max:50', 'email', 'unique:person,email'],
             'phone' => ['required', 'digits:8', 'unique:person,phone'],
             'whatsapp' => ['nullable', 'digits:8'],

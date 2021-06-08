@@ -52,6 +52,11 @@ class PersonaComision extends Model
         'deleted_at' => 'datetime:d/m/Y h:i:s'
     ];
 
+    public function person()
+    {
+        return $this->belongsTo(Persona::class, 'person_id', 'id');
+    }
+
     public function commission()
     {
         return $this->belongsTo(Comision::class, 'commission_id', 'id');

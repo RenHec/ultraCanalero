@@ -16,6 +16,7 @@
       <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
       <link href="{{ asset('material') }}/css/material-ultra.css" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+      @yield('style')
     </head>
     <body class="{{ $class ?? '' }}">
         @include('layouts.page_templates.guest')
