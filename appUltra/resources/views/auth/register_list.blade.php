@@ -7,7 +7,7 @@
 <div class="container">
   <div class="row align-items-center">
     @foreach ($commissions as $key => $commission)
-        <div class="col-lg-6 col-md-6 col-sm-12 ml-auto mr-auto">
+        <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="card">
                 <div class="box">
                     <div class="content">

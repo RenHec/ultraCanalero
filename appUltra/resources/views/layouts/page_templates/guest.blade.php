@@ -1,7 +1,7 @@
 @include('layouts.navbars.navs.guest')
 <div class="wrapper wrapper-full-page">
   <div class="page-header login-page header-filter" filter-color="black" style="background-image: url('{{ asset('material') }}/img/login.webp'); background-size: cover; background-position: top center;align-items: center;" data-color="purple"> 
-    <audio autoplay="" loop controls="controls">
+    <audio autoplay="" loop controls="">
         <source src="/ultra/audio/cuatro.mp3" type="audio/mp3">
         <source src="/ultra/audio/uno.mp3" type="audio/mp3">
         <source src="/ultra/audio/tres.mp3" type="audio/mp3">
