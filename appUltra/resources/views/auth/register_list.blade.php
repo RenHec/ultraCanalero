@@ -1,7 +1,7 @@
 
 @extends('layouts.app', ['class' => 'off-canvas-sidebar', 'activePage' => 'lista-registro', 'title' => __('Ultra Canalero / Comisiones')])
 @section('style')
-    <link href="{{ asset('material') }}/css/material-card.css" rel="stylesheet" />
+    <link href="{{ asset('material') }}/css/material-card-new.css" rel="stylesheet" />
 @endsection
 @section('content')
 <div class="container">
