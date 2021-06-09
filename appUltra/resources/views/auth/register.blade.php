@@ -6,7 +6,7 @@
 <div class="container">
   <div class="row align-items-center">
     <div class="col-lg-6 col-md-6 col-sm-8 ml-auto mr-auto">
-      <form class="form" method="POST" action="{{ route('registro.store') }}" enctype="multipart/form-data">
+      <form class="form" method="POST" action="{{ route('registro.store') }}" enctype="multipart/form-data" autocomplete="false">
         @csrf
         {!! RecaptchaV3::field('contacto') !!}
         <div class="card card-login card-hidden mb-3">

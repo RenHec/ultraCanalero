@@ -19,52 +19,46 @@ class RegistroController extends Controller
 
     public function store(RegistroRequest $request)
     {
-        $time = \RecaptchaV3::verify($request->get('g-recaptcha-response'), 'contacto');
-        if ($time > 0.5) {
-
-            if (!is_null($request->whatsapp) && str_replace(' ', '', $request->whatsapp) != '' && isset($request->whatsapp)) {
-                if (!is_null(Persona::where('whatsapp', $request->whatsapp)->first())) {
-                    return redirect()->route('registro.index')->with('warning', "El whatsapp con número {$request->whatsapp}, ya se encuentra registrado en el sistema.");
-                }
+        if (!is_null($request->whatsapp) && str_replace(' ', '', $request->whatsapp) != '' && isset($request->whatsapp)) {
+            if (!is_null(Persona::where('whatsapp', $request->whatsapp)->first())) {
+                return redirect()->route('registro.index')->with('warning', "El whatsapp con número {$request->whatsapp}, ya se encuentra registrado en el sistema.");
             }
+        }
 
-            if (!is_null($request->telegram) && str_replace(' ', '', $request->telegram) != '' && isset($request->telegram)) {
-                if (!is_null(Persona::where('telegram', $request->telegram)->first())) {
-                    return redirect()->route('registro.index')->with('warning', "El telegram con número {$request->telegram}, ya se encuentra registrado en el sistema.");
-                }
+        if (!is_null($request->telegram) && str_replace(' ', '', $request->telegram) != '' && isset($request->telegram)) {
+            if (!is_null(Persona::where('telegram', $request->telegram)->first())) {
+                return redirect()->route('registro.index')->with('warning', "El telegram con número {$request->telegram}, ya se encuentra registrado en el sistema.");
             }
+        }
 
-            try {
-                $db = DB::connection('mysql');
+        try {
+            $db = DB::connection('mysql');
 
-                $db->beginTransaction();
+            $db->beginTransaction();
 
-                $data = $request->all();
-                $data['information'] = mb_strtolower($request->information) == 'on' ? true : false;
-                $data['ip'] = $request->ip();
-                $insert = Persona::create($data);
+            $data = $request->all();
+            $data['information'] = mb_strtolower($request->information) == 'on' ? true : false;
+            $data['ip'] = $request->ip();
+            $insert = Persona::create($data);
 
-                if (isset($request->commissions)) {
-                    foreach ($request->commissions as $value) {
-                        $comision = PersonaComision::where('person_id', $insert->id)->where('commission_id', $value)->first();
-                        if (is_null($comision)) {
-                            $comision = new PersonaComision();
-                        }
-                        $comision->person_id = $insert->id;
-                        $comision->commission_id = $value;
-                        $comision->save();
+            if (isset($request->commissions)) {
+                foreach ($request->commissions as $value) {
+                    $comision = PersonaComision::where('person_id', $insert->id)->where('commission_id', $value)->first();
+                    if (is_null($comision)) {
+                        $comision = new PersonaComision();
                     }
+                    $comision->person_id = $insert->id;
+                    $comision->commission_id = $value;
+                    $comision->save();
                 }
-
-                $db->commit();
-
-                return redirect()->route('registro.index')->with('success', "¡Gracias! <b>{$request->names} {$request->surnames}</b> por registrarte en la familia ultra canalera.");
-            } catch (\Exception $e) {
-                $db->rollBack();
-                return redirect()->route('registro.index')->with('danger', "Ocurrio un problema al ingresar la información a la base de datos.");
             }
-        } else {
-            return redirect()->route('registro.index')->with('info', "¡Hola! <b>{$request->names} {$request->surnames}</b>, estás tratando de hacer algo malo. Te estaremos observando.");
+
+            $db->commit();
+
+            return redirect()->route('registro.index')->with('success', "¡Gracias! <b>{$request->names} {$request->surnames}</b> por registrarte en la familia ultra canalera.");
+        } catch (\Exception $e) {
+            $db->rollBack();
+            return redirect()->route('registro.index')->with('danger', "Ocurrio un problema al ingresar la información a la base de datos.");
         }
     }
 
