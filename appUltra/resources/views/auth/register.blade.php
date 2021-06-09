@@ -212,3 +212,6 @@
   </div>
 </div>
 @endsection
+@push('js')
+  {!! RecaptchaV3::initJs() !!}
+@endpush
