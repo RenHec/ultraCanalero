@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::name('registro.index')->get('registro', 'Fase1\Registro\RegistroController@index');
 Route::name('registro.store')->post('registro', 'Fase1\Registro\RegistroController@store');
 Route::name('registro.show')->get('registro/listado', 'Fase1\Registro\RegistroController@show');
+Route::name('registro.update')->post('registro/asignar/comision', 'Fase1\Registro\RegistroController@update');
