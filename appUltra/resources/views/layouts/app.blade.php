@@ -66,7 +66,7 @@
         @stack('js')
         <script>
           $('.selectpicker').selectpicker();
-          var chatbox = document.getElementById('fb-customer-chat');
+          /*var chatbox = document.getElementById('fb-customer-chat');
           chatbox.setAttribute("page_id", "1941669916118053");
           chatbox.setAttribute("attribution", "biz_inbox");
             window.fbAsyncInit = function() {
@@ -82,7 +82,7 @@
               js = d.createElement(s); js.id = id;
               js.src = document.location.protocol + '//connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
               fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
+            }(document, 'script', 'facebook-jssdk'));*/
         </script>
     </body>
 </html>
