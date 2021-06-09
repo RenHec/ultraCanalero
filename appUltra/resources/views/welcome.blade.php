@@ -7,7 +7,7 @@
           <h1 class="text-white text-center">{{ __('Bienvenido ultra canalero de corazón') }}</h1>
       </div>
       <div class="col-lg-7 col-md-8">
-        <a href="{{ route('registro.index') }}" class="btn btn-green btn-block btn-lg">{{ __('Registrarse') }}</a>
+        <a href="{{ route('registro.index') }}" class="btn btn-green btn-block btn-lg">{{ __('Click para registrarte') }}</a>
       </div>
   </div>  
   <div class="row justify-content-center">
