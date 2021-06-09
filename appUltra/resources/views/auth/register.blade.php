@@ -6,7 +6,7 @@
     <div class="col-lg-6 col-md-6 col-sm-8 ml-auto mr-auto">
       <form class="form" method="POST" action="{{ route('registro.store') }}" enctype="multipart/form-data">
         @csrf
-
+        {!! RecaptchaV3::field('contacto') !!}
         <div class="card card-login card-hidden mb-3">
           <div class="card-header card-header-green text-center">
             <h4 class="card-title"><strong>{{ __('Unete al proyecto') }}</strong></h4>

@@ -6,7 +6,11 @@
       <div class="col-lg-7 col-md-8">
           <h1 class="text-white text-center">{{ __('Bienvenido ultra canalero de corazón') }}</h1>
       </div>
-  </div>  <div class="row justify-content-center">
+      <div class="col-lg-7 col-md-8">
+        <a href="{{ route('registro.index') }}" class="btn btn-green btn-block btn-lg">{{ __('Registrarse') }}</a>
+      </div>
+  </div>  
+  <div class="row justify-content-center">
       <div class="col-lg-12 col-md-12">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">

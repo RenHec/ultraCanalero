@@ -67,5 +67,6 @@
         <script>
           $('.selectpicker').selectpicker();
         </script>
+        {!! RecaptchaV3::initJs() !!}
     </body>
 </html>
