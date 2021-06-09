@@ -1,5 +1,7 @@
 @extends('layouts.app', ['class' => 'off-canvas-sidebar', 'activePage' => 'registro', 'title' => __('Ultra Canalero / Registro')])
-
+@section('style')
+  {!! RecaptchaV3::initJs() !!}
+@endsection
 @section('content')
 <div class="container">
   <div class="row align-items-center">
@@ -212,6 +214,3 @@
   </div>
 </div>
 @endsection
-@push('js')
-  {!! RecaptchaV3::initJs() !!}
-@endpush
