@@ -103,7 +103,7 @@ class RegistroController extends Controller
 
             $db->commit();
 
-            return redirect()->route('registro.show')->with('success', "¡Gracias! <b>{$request->names} {$request->surnames}</b> por registrarte en la familia ultra canalera.");
+            return redirect()->route('registro.show')->with('success', "¡Gracias! <b>{$person->names} {$person->surnames}</b> por ser parte de este hermoso proyecto.");
         } catch (\Exception $e) {
             $db->rollBack();
             return redirect()->route('registro.show')->with('danger', "Ocurrio un problema al ingresar la información a la base de datos. {$e}");
