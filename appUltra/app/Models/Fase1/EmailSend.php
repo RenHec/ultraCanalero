@@ -4,11 +4,12 @@ namespace App\Models\Fase1;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Comision extends Model
+class EmailSend extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
+
+    public const INVITACION = 'Invitación';
 
     /**
      * The connection name for the model.
@@ -22,16 +23,20 @@ class Comision extends Model
      *
      * @var string
      */
-    protected $table = 'commission';
+    protected $table = 'email_send';
 
     /**
      * The attributes that aren't mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-        'description'
+    protected $guarded = [
+        'title',
+        'email',
+        'send',
+        'token',
+        'description',
+        'answer'
     ];
 
     /**
@@ -39,7 +44,7 @@ class Comision extends Model
      *
      * @var array
      */
-    protected $dates = ['created_at', 'updated_at', 'deleted_at'];
+    protected $dates = ['created_at', 'updated_at'];
 
     /**
      * The attributes that should be cast to native types.
@@ -49,6 +54,12 @@ class Comision extends Model
     protected $casts = [
         'created_at' => 'datetime:d/m/Y h:i:s',
         'updated_at' => 'datetime:d/m/Y h:i:s',
-        'deleted_at' => 'datetime:d/m/Y h:i:s'
+        'send' => 'boolean',
+        'answer' => 'boolean'
     ];
+
+    public function person()
+    {
+        return $this->belongsTo(Persona::class, 'email', 'email');
+    }
 }

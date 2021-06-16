@@ -44,10 +44,7 @@ class RegistroController extends Controller
 
             if (isset($request->commissions) && !is_null($request->commissions) && count($request->commissions) > 0) {
                 foreach ($request->commissions as $value) {
-                    $comision = PersonaComision::where('person_id', $insert->id)->where('commission_id', $value)->first();
-                    if (is_null($comision)) {
-                        $comision = new PersonaComision();
-                    }
+                    $comision = new PersonaComision();
                     $comision->person_id = $insert->id;
                     $comision->commission_id = $value;
                     $comision->save();
@@ -87,17 +84,17 @@ class RegistroController extends Controller
             $person->ip = $request->ip();
             $person->save();
 
-            PersonaComision::where('person_id', $person->id)->delete();
+            PersonaComision::where('person_id', $person->id)->where('leader', false)->delete();
 
             if (isset($request->commissions) && !is_null($request->commissions) && count($request->commissions) > 0) {
                 foreach ($request->commissions as $value) {
-                    $comision = PersonaComision::withoutTrashed()->where('person_id', $person->id)->where('commission_id', $value)->first();
+                    $comision = PersonaComision::where('person_id', $person->id)->where('commission_id', $value)->first();
                     if (is_null($comision)) {
                         $comision = new PersonaComision();
+                        $comision->person_id = $person->id;
+                        $comision->commission_id = $value;
+                        $comision->save();
                     }
-                    $comision->person_id = $person->id;
-                    $comision->commission_id = $value;
-                    $comision->save();
                 }
             }
 

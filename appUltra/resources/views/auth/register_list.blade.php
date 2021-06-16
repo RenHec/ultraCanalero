@@ -94,7 +94,7 @@
                         <p>
                             @foreach ($persons as $person)
                                 @if ($person->commission_id == $commission->id)
-                                {{ $person->person->getFullNameAttribute() }} <br>
+                                  {{ $person->leader ? "{$person->person->getFullNameAttribute()} (Líder)" : $person->person->getFullNameAttribute() }} <br>
                                 @endif
                             @endforeach
                         </p>

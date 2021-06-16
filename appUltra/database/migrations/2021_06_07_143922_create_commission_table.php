@@ -11,7 +11,7 @@ class CreateCommissionTable extends Migration
      *
      * @return void
      */
-    public function up()
+    /*public function up()
     {
         Schema::create('commission', function (Blueprint $table) {
             $table->id();
@@ -20,15 +20,15 @@ class CreateCommissionTable extends Migration
             $table->softDeletes();
             $table->timestamps();
         });
-    }
+    }*/
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
+    /*public function down()
     {
         Schema::dropIfExists('commission');
-    }
+    }*/
 }

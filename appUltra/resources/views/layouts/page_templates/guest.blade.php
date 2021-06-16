@@ -10,6 +10,6 @@
     <!-- Your plugin de chat code 
     <div id="fb-customer-chat" class="fb-customerchat"> -->
     </div>
-    @include('layouts.footers.guest')
   </div>
+  @include('layouts.footers.guest')
 </div>

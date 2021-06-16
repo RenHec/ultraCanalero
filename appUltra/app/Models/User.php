@@ -20,6 +20,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'administrator',
+        'treasurer',
+        'inventory',
+        'singing_instrument',
+        'page'
     ];
 
     /**
@@ -39,5 +44,12 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'created_at' => 'datetime:d/m/Y h:i:s',
+        'updated_at' => 'datetime:d/m/Y h:i:s',
+        'administrator' => 'boolean',
+        'treasurer' => 'boolean',
+        'inventory' => 'boolean',
+        'singing_instrument' => 'boolean',
+        'page' => 'boolean'
     ];
 }
